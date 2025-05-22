@@ -35,7 +35,7 @@ def get_ratings(db: Session, skip: int = 0, limit: int = 100, movie_id: int = No
     query = db.query(models.Rating)
 
     if movie_id : 
-        query = query.filter(models.Rating.moviedId == movie_id)
+        query = query.filter(models.Rating.movieId == movie_id)
     if user_id:
         query = query.filter(models.Rating.userId == user_id)
     if min_rating:
